@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+$desaturatedRed: hsl(0, 36%, 70%);
+$softRed: hsl(0, 93%, 68%);
+$fontSize: 1rem;
+$fontColor: hsl(0, 6%, 24%);
+$small: 300px;
+$medium: 900px;
+
+
+*{
+    box-sizing: border-box;
+  
+}
+body {
+    margin: 0;
+    font-size: $fontSize;
+    font-family: "Josefin Sans", sans-serif;
+}
+.container {
+    display: flex;
+    width: 100%;
+}
+.coming-soon {
+    background-image: url(./images/bg-pattern-desktop.svg);
+    padding: 70px 100px;
+    .hero-mobile {
+        display: none;
+    }
+    .coming-soon-content{
+        padding: 70px 0;
+        
+    }
+    h1 {
+        text-transform: uppercase;
+        font-size: 4rem;
+        letter-spacing: 15px;
+        font-weight: 400;
+        color: $fontColor;
+    }
+    span{
+        color: $desaturatedRed;
+        font-weight: 300;
+    }
+    p{
+        color: $desaturatedRed;
+        width: 80%;
+        line-height: 1.5;
+       padding-bottom: 20px;
+    }
+   
+}
+
+
+@media screen and (min-width: $small) and (max-width: $medium) {
+    .coming-soon {
+        padding: 0;
+        .coming-soon-content{
+            padding: 50px 20px;
+            
+        }
+        .logo{
+            padding: 30px 20px;
+        }
+       .hero-mobile {
+            display: block;
+            width: 100%;
+        }
+        .coming-soon-content{
+          text-align: center;
+        }
+        h1{
+            font-size: 3rem;
+        }
+        p{
+            width: 100%;
+        }
+}
+
+    .hero-desktop{
+      display: none;
+     }
+     
+}
